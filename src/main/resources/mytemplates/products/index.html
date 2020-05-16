@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<h2>Products</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="item : ${list}">
+					<td th:text="${item.id}">1</td>
+					<td th:text="${item.name}">Product Name</td>
+					<td th:text="${item.price}">Rp 5,000</td>
+				</tr>
+			</tbody>
+			
+		</table>
+	</body>
+</html>
