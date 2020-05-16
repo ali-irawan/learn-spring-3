@@ -23,12 +23,12 @@ public class ProductRestController {
 
 	@GetMapping("/api/products")
 	List<Product> all() {
-		return repository.findAll();
+		return repository.findAll(); // SELECT x, x, x, x FROM products
 	}
 
 	@PostMapping("/api/products")
 	Product newProduct(@RequestBody Product newProduct) {
-		return repository.save(newProduct);
+		return repository.save(newProduct); // INSERT INTO products (x,x,x,x) VALUES (?,?,?,?)
 	}
 
 	// Single item
